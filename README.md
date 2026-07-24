@@ -8,7 +8,7 @@ Dự án thực tập xây dựng hệ thống phần mềm quản lý linh ki�
 
 ---
 
-## 🚀 Hướng dẫn cài đặt và chạy ứng dụng (Dành cho Giảng viên/Người đánh giá)
+## 🚀 Hướng dẫn cài đặt và chạy ứng dụng
 
 Để chạy được toàn bộ hệ thống này trên máy cá nhân, Thầy/Cô vui lòng thực hiện theo 3 bước sau:
 
