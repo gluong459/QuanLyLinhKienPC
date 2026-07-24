@@ -2,6 +2,7 @@
 Dự án thực tập xây dựng hệ thống phần mềm quản lý linh kiện máy tính.
 
 ## Cấu trúc thư mục
+- **`/Frontend`**: Chứa toàn bộ giao diện ứng dụng (HTML/CSS/JS).
   - `index.html`: Giao diện chính của trang Quản trị (Admin Dashboard).
   - `admin.css`, `style.css`: Các file định dạng giao diện.
   - `admin.js`, `script.js`: Xử lý logic gọi API, thống kê và tương tác dữ liệu lên trang web.
