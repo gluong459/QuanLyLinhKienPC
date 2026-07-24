@@ -1,0 +1,221 @@
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, var(--color-dark) 0%, #11221e 100%);
+  color: var(--color-white);
+  padding: 2.5rem 1.5rem;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-light);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 2px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu li {
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: rgba(255,255,255,0.7);
+}
+
+.sidebar-menu li:hover, .sidebar-menu li.active {
+  background: rgba(137, 215, 183, 0.15);
+  color: var(--color-light);
+  transform: translateX(5px);
+}
+
+.sidebar-menu li.active {
+  border-left: 4px solid var(--color-light);
+}
+
+.admin-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  background: var(--color-bg);
+  overflow-y: auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: var(--color-surface);
+  padding: 1.5rem 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  border: 1px solid var(--color-border);
+}
+
+.admin-header h2 {
+  font-size: 2.2rem;
+  color: var(--color-text);
+  font-family: 'Outfit', sans-serif;
+}
+
+
+.table-container {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+th:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; }
+th:last-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
+
+tr {
+  transition: all 0.3s ease;
+}
+
+tr:hover td {
+  background: rgba(137, 215, 183, 0.05);
+}
+
+td strong {
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 8px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-edit { 
+  background: rgba(66, 132, 117, 0.1);
+  color: var(--color-primary);
+}
+.btn-edit:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 132, 117, 0.3);
+}
+
+.btn-delete { 
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+.btn-delete:hover {
+  background: #e74c3c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive Styles for Split Screen */
+@media (max-width: 1200px) {
+  .admin-container { 
+    flex-direction: column; 
+  }
+  .sidebar { 
+    width: 100%; 
+    height: auto; 
+    padding: 1rem 1.5rem; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(137, 215, 183, 0.2);
+  }
+  .sidebar .logo { 
+    margin-bottom: 0; 
+    font-size: 1.5rem; 
+    min-width: max-content;
+  }
+  .sidebar-menu { 
+    flex-direction: row; 
+    overflow-x: auto; 
+    gap: 10px;
+    margin-left: 20px;
+    width: 100%;
+  }
+  .sidebar-menu li { 
+    padding: 8px 12px; 
+    font-size: 0.9rem; 
+    white-space: nowrap; 
+  }
+  .sidebar-menu li i {
+    display: none;
+  }
+  .admin-content { 
+    padding: 1.5rem; 
+    width: 100%;
+  }
+  .admin-header { 
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: stretch; 
+    margin-bottom: 1.5rem;
+  }
+  .table-container {
+      padding: 1rem;
+  }
+}
+
+
