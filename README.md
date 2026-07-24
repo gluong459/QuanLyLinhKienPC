@@ -2,10 +2,18 @@
 Dự án thực tập xây dựng hệ thống phần mềm quản lý linh kiện máy tính.
 
 ## Cấu trúc thư mục
-- `/Frontend`: Giao diện ứng dụng (HTML, CSS, JS thuần).
-- `/Backend`: API Server (C# .NET Minimal API).
-- `/Database`: Chứa toàn bộ Script cấu trúc bảng, phân quyền, Store Procedure, View và Backup script cho MySQL.
-
+  - `index.html`: Giao diện chính của trang Quản trị (Admin Dashboard).
+  - `admin.css`, `style.css`: Các file định dạng giao diện.
+  - `admin.js`, `script.js`: Xử lý logic gọi API, thống kê và tương tác dữ liệu lên trang web.
+  - `/images`: Chứa các hình ảnh sản phẩm.
+- **`/Backend`**: Chứa mã nguồn Server (C# .NET Minimal API).
+  - `Program.cs`: File chứa toàn bộ logic Backend, kết nối CSDL, cấu hình CORS và các endpoint API (RESTful).
+  - `appsettings.json`: File cấu hình chuỗi kết nối (Connection String) đến MySQL.
+- **`/Database`**: Chứa các đoạn mã kịch bản SQL.
+  - `1_quanlybanlepc.sql`: Khởi tạo bảng, ràng buộc và chèn dữ liệu mẫu.
+  - `2_phan_quyen.sql`: Phân quyền bảo mật (tạo user, gán quyền).
+  - `3_TongHop_Script_TuAn4.sql`: Khởi tạo View thống kê, Stored Procedure và cấp quyền thực thi.
+  - `backup_db.bat`: Script bản sao lưu tự động CSDL (Automated Backup Script).
 ---
 
 ## Hướng dẫn cài đặt và chạy ứng dụng
