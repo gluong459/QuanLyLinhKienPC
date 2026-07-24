@@ -1,14 +1,14 @@
 # Hệ thống Quản lý Linh kiện PC
 Dự án thực tập xây dựng hệ thống phần mềm quản lý linh kiện máy tính.
 
-## 📂 Cấu trúc thư mục
+## Cấu trúc thư mục
 - `/Frontend`: Giao diện ứng dụng (HTML, CSS, JS thuần).
 - `/Backend`: API Server (C# .NET Minimal API).
 - `/Database`: Chứa toàn bộ Script cấu trúc bảng, phân quyền, Store Procedure, View và Backup script cho MySQL.
 
 ---
 
-## 🚀 Hướng dẫn cài đặt và chạy ứng dụng
+## Hướng dẫn cài đặt và chạy ứng dụng
 
 Để chạy được toàn bộ hệ thống này trên máy cá nhân, Thầy/Cô vui lòng thực hiện theo 3 bước sau:
 
